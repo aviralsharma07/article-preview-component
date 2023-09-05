@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--light-grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  width: 90vw;
+  height: 66vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/** ###### STYLING CARD DRAWER IMAGE ###### **/
+
+.card__drawer-image {
+  width: 100%;
+  height: 40%;
+  border-radius: 10px 10px 0 0;
+  /* border: 2px solid yellow; */
+  background-image: url(./images/drawers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/** ###### STYLING CARD PREVIEW SECTION ###### **/
+
+.card__article-preview {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/** ###### STYLING CARD PREVIEW SECTION HEADING ###### **/
+
+.card__article-preview .article-preview__heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+  margin: 2.5rem 1rem 1.5rem 1rem;
+  max-width: 25ch;
+  line-height: 1.4;
+  /* border: 2px solid cyan; */
+}
+
+/** ###### STYLING CARD PREVIEW SECTION PARAGRAPH DESCRIPTION ###### **/
+
+.card__article-preview .article-preview__description {
+  /* border: 2px solid green; */
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--desaturated-dark-blue);
+  margin: 0 1rem 1rem 1rem;
+  max-width: 32ch;
+  line-height: 1.4;
+}
+
+/** ###### STYLING CARD PREVIEW SECTION AUTHOR DETAILS ###### **/
+
+.article-preview__author {
+  /* border: 2px solid darkblue; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  position: relative;
+}
+
+.article-preview__author .author-image {
+  /* border: 2px solid yellow; */
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.article-preview__author .author-details {
+  /* border: 2px solid pink; */
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.author-details .author-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+}
+
+.author-details .author-date {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--desaturated-dark-blue);
+}
+
+.share-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+  position: relative;
+}
+
+.share-button {
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.share-popup {
+  position: absolute;
+  background-color: var(--very-dark-grayish-blue);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  width: 21.6rem;
+  height: 6rem;
+  padding: 2rem;
+  right: -1.5rem;
+  top: -1rem; /* Adjust the distance from the button */
+  visibility: hidden;
+  transition: all 0.1s ease-in-out;
+}
+
+.share-popup p {
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.share-icon {
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0 0.5rem 0 0.5rem;
+  cursor: pointer;
+}
+
+.show-popup {
+  visibility: visible;
+}
+
+/**! ######################## MEIDIA QUERIES ######################## !**/
+
+@media (min-width: 413px) {
+  .card {
+    border-radius: 10px;
+    width: 55vw;
+    height: 44vh;
+    background-color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /** ###### STYLING CARD DRAWER IMAGE ###### **/
+
+  .card__drawer-image {
+    width: 40%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    background-image: url(./images/drawers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /** ###### STYLING CARD PREVIEW SECTION ###### **/
+
+  .card__article-preview {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /** ###### STYLING CARD PREVIEW SECTION HEADING ###### **/
+
+  .card__article-preview .article-preview__heading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+    margin: 1.75rem auto 1rem 2rem;
+    max-width: 26ch;
+    line-height: 1.3;
+  }
+
+  /** ###### STYLING CARD PREVIEW SECTION PARAGRAPH DESCRIPTION ###### **/
+
+  .card__article-preview .article-preview__description {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0rem auto 1rem 2rem;
+    color: var(--desaturated-dark-blue);
+    max-width: 44ch;
+    line-height: 1.4;
+  }
+
+  /** ###### STYLING CARD PREVIEW SECTION AUTHOR DETAILS ###### **/
+
+  .article-preview__author {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+
+  /** ###### STYLING SHARE POPUP ###### **/
+
+  .share-popup::before {
+    content: "";
+    position: absolute;
+    top: 3rem; /* Adjust the distance from the top of the popup */
+    left: calc(50% - 10px); /* Center the arrow horizontally */
+    border-width: 10px; /* Adjust the size of the arrow */
+    border-style: solid;
+    border-color: transparent transparent var(--very-dark-grayish-blue); /* Arrow color */
+    transform: rotate(180deg);
+  }
+
+  .share-container .share-popup {
+    /* visibility: hidden; */
+    position: absolute;
+    width: 12rem;
+    height: 3rem;
+    top: -3.5rem; /* Adjust the distance from the button */
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .share-popup p {
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-left: 0.5rem;
+  }
+
+  .share-icon {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem 0 0.5rem;
+    cursor: pointer;
+  }
+
+  .share-popup {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .show-popup {
+    visibility: visible;
+  }
+}
