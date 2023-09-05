@@ -17,7 +17,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 Users should be able to:
 
-- View the optimal layout for the component depending on their device's screen size
+- View the optimal layout for the component depending on the device's screen size
 - See the social media share links when they click the share icon
 
 ### Screenshot
@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repo Link](https://github.com/aviralsharma07)
+- Live Site URL: [Live Project Link](https://article-preview-component-avi.netlify.app/)
 
 ## My process
 
